@@ -1,0 +1,146 @@
+.text-green{
+
+  color:#119083;  
+
+}
+
+.back-green{
+background-color: #119083;
+
+}
+
+.nav-item {
+    padding: 0.5rem 0xp;
+  }
+  
+  /* .dropdown-hover:hover>.dropdown-menu {
+  display: inline-block;
+  } */
+  
+  .dropdown-hover>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+  }
+
+
+.blog-img1{
+  background-image: url(./images/image_1.jpg.webp);
+  height: 250px;
+  width: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.blog-img2{
+    background-image: url(./images/image_2.jpg.webp);
+    height: 250px;
+    width: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+.blog-img3{
+    background-image: url(./images/image_3.jpg.webp);
+    height: 250px;
+    width: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; 
+  }
+
+
+.blog1-img:hover,.blog2-img:hover,.blog3-img:hover {
+    cursor: pointer;
+}
+.img-border{
+    position: relative;
+}
+
+.blog-img1::before,
+.blog-img1::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+  .blog-img1::before {
+    top: 0;
+    left: 0;
+    border-top: 6px solid  #119083;
+    border-left: 6px solid  #119083;
+  }
+
+  .blog-img1::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 6px solid #119083;
+    border-right: 6px solid  #119083;
+}
+
+.blog-img2::before,
+.blog-img2::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+  .blog-img2::before {
+    top: 0;
+    left: 0;
+    border-top: 6px solid  #119083;
+    border-left: 6px solid  #119083;
+  }
+
+  .blog-img2::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 6px solid #119083;
+    border-right: 6px solid  #119083;
+}
+
+.blog-img3::before,
+.blog-img3::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+  .blog-img3::before {
+    top: 0;
+    left: 0;
+    border-top: 6px solid  #119083;
+    border-left: 6px solid  #119083;
+  }
+
+  .blog-img3::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 6px solid #119083;
+    border-right: 6px solid  #119083;
+}
+
+
+button{
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    border: none;
+    background-color: #119083;
+    color: white;
+    border: 1px solid;
+    border-radius: 30px;
+   
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #119083; 
+    border: 1px solid; 
+    border-radius: 20px;
+    border-color: #119083;
+}
+
+

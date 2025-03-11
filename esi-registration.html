@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESI Registration Online</title>
+    <link rel="stylesheet" href="./css/esi-registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg back-green" style="padding: 0px;">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <a class="navbar-brand ms-lg-4 text-white fw-bold fs-6" href="./index.html">
+                <img src="./css/images/NEW WHITE LOGO.png" class="img-fluid" height="100" width="220"
+                    alt="Scalexcel Logo">
+            </a>
+            <button data-mdb-button-init class="navbar-toggler px-0" type="button" data-mdb-collapse-init
+                data-mdb-target="#navbarExampleOnHover" aria-controls="navbarExampleOnHover" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarExampleOnHover">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
+
+                    <!-- Navbar dropdown -->
+                    <li id="businessSetup" onclick="displayNavLinks(event)"
+                        class="nav-item dropdown dropdown-hover position-static">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle text-white fw-bold ps-5 ms-5" href="#"
+                            id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            Business Setup
+                        </a>
+
+                        <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                  border-top-right-radius: 0;">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinks('RegistrationinIndia')">
+                                                <a href="./private.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Private
+                                                    Limited (Pvt Ltd) Company Registration in India</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinks('LLPRegistrationa')">
+                                                <a href="./limited-liability.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Limited
+                                                    Liability Partnership (LLP) Registration</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinks('onePerson')">
+                                                <a href="./one-person.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">One
+                                                    Person Company (OPC) Registration</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center"
+                                                onmouseover="getLinks('Section8')">
+                                                <a href="./sole.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Section
+                                                    8 Company Registration</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush" id="bussiness-setup-links">
+                                            <!-- <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Transparent</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Incorporation
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by
+                                                Startups</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Quick</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Ideal for Small
+                                                Businesses</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Efficient</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Incorporation
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Perfect for Solo
+                                                Entrepreneurs</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Transparent</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Incorporation
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Ideal for NGOs</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="taxCompliance" onclick="displayNavLinks(event)"
+                        class="nav-item dropdown dropdown-hover position-static">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle text-white fw-bold" href="#"
+                            id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            Tax & Compliance
+                        </a>
+                        <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                  border-top-right-radius: 0;">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinksTaxCompliance('GSTRegistration')">
+                                                <a href="./gst.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">GST
+                                                    Registration</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinksTaxCompliance('ITR')">
+                                                <a href="./itr.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Income
+                                                    Tax Filing(ITR)</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center"
+                                                onmouseover="getLinksTaxCompliance('TDS')">
+                                                <a href="./tds.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">TDS
+                                                    Return Filing</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush" id="taxCompliancelinks">
+                                            <!-- <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Quick</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by
+                                                Businesses</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Transparent</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Filing
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by
+                                                Individuals & Businesses</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Efficient</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Filing
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by
+                                                Businesses</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="trademarkIP" onclick="displayNavLinks(event)"
+                        class="nav-item dropdown dropdown-hover position-static">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle text-white fw-bold" href="#"
+                            id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            Trademark & IP
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                  border-top-right-radius: 0;">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinksTradeMark('tradeMark')">
+                                                <a href="./trademark.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Trademark
+                                                    Registration</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center"
+                                                onmouseover="getLinksTradeMark('copyRight')">
+                                                <a href="./copyright.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Copyright
+                                                    Registration</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush" id="trademarkIPlinks">
+                                            <!-- <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Quick</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by
+                                                Brands</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Transparent</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Ideal for
+                                                Creators</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="documentation" onclick="displayNavLinks(event)"
+                        class="nav-item dropdown dropdown-hover position-static">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle text-white fw-bold" href="#"
+                            id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            Documentation
+                        </a>
+
+                        <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                  border-top-right-radius: 0;">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinksDocumentation('draftingLegal')">
+                                                <a href="./legal.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Drafting
+                                                    of Legal Agreements</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center"
+                                                onmouseover="getLinksDocumentation('nonDisclosure')">
+                                                <a href="./non-disclosure.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Non-Disclosure
+                                                    Agreement (NDA)</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush" id="documentationlinks">
+                                            <!-- <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Reliable</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Services</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Drafting
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by
+                                                Businesses</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Quick</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Drafting
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Ideal for
+                                                Startups</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="others" onclick="displayNavLinks(event)"
+                        class="nav-item dropdown dropdown-hover position-static">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle text-white fw-bold" href="#"
+                            id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            Others
+                        </a>
+
+                        <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                  border-top-right-radius: 0;">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinksOthers('FSSAI')">
+                                                <a href="./fssai.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">FSSAI
+                                                    License Registration</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center"
+                                                onmouseover="getLinksOthers('IEC')">
+                                                <a href="./iec.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">IEC
+                                                    Code Registration</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush" id="otherslinks">
+                                            <!-- <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Transparent</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Services</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by Food
+                                                Businesses</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Quick</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Ideal for
+                                                Exporters</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="resources" onclick="displayNavLinks(event)"
+                        class="nav-item dropdown dropdown-hover position-static">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle text-white fw-bold" href="#"
+                            id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+
+                        <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                  border-top-right-radius: 0;">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinksResources('taxation')">
+                                                <a href="./taxation.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Taxation</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between border-bottom align-items-center"
+                                                onmouseover="getLinksResources('accounting')">
+                                                <a href="./accounting.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Accounting</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center"
+                                                onmouseover="getLinksResources('consulting')">
+                                                <a href="./consulting.html"
+                                                    class="list-group-item list-group-item-action card-title fw-semibold border-0">Business
+                                                    Consulting</a>
+                                                <img src="https://assets.zolvit.com/live-images/zolvit-header/zolvit-arrow-right.svg"
+                                                    height="33" width="33">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush" id="resourceslinks">
+                                            
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <a data-mdb-dropdown-init class="nav-link dropdown-toggle text-white fw-bold" href="./blog.html"
+                        id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        Blog
+                    </a>
+                    <!-- <li class="nav-item dropdown dropdown-hover position-static">
+                        
+
+                        <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                  border-top-right-radius: 0;">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <a href="" class="list-group-item list-group-item-action fw-bold fs-5 pt-4 pb-4">Taxation</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Transparent</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Services</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by Food
+                                                Businesses</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <a href="" class="list-group-item list-group-item-action fw-bold fs-5 pt-4 pb-4">Accounting</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Quick</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Compliance</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Ideal for
+                                                Exporters</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+
+                    <li class="nav-item dropdown dropdown-hover position-static">
+                        <a data-mdb-dropdown-init class="nav-link text-white fw-bold" href="#" id="navbarDropdown"
+                            role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bars text-white fw-bold"></i>
+                        </a>
+
+                        <div class="dropdown-menu w-90 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                                  border-top-right-radius: 0;">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-12 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <a href="" class="list-group-item list-group-item-action fw-bold fs-5">FSSAI
+                                                License Registration</a>
+                                            <a href="" class="list-group-item list-group-item-action">Affordable &
+                                                Transparent</a>
+                                            <a href="" class="list-group-item list-group-item-action">Comprehensive
+                                                Services</a>
+                                            <a href="" class="list-group-item list-group-item-action">Post-Registration
+                                                Benefits</a>
+                                            <a href="" class="list-group-item list-group-item-action">Trusted by Food
+                                                Businesses</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <h1 class="fw-bold mb-4 text-center">ESI Registration Online</h1>
+            <p class="fs-5 mb-4 text-center">Fastest PF registration turnaround time in India with Guaranteed application filing in 3 days or get a full refund T&C* . Track the progress of your application anytime, anywhere</p>
+            <div class="d-lg-flex pt-2 justify-content-center">
+                <i class="fa fa-circle-check text-green pt-2 pe-2"></i>
+                <p class="fs-5">Simplify Your ESI Registration Online With expert assisted process
+                </p>
+            </div>
+            <div class="d-lg-flex justify-content-center">
+                <i class="fa fa-circle-check text-green pt-2 pe-2"></i>
+                <p class="fs-5">Step-by-Step Support and quick document processing.</p>
+            </div>
+            <div class="text-center">
+            <img src="https://assets.vakilsearch.com/live-images/video-play/watch_now-yellowblack.png" height="60" width="180">
+            </div>
+            <div class="d-lg-flex justify-content-center mt-4 mb-3">
+                <button type="submit" class="px-5 py-3 text-white back-green border-0 rounded-3 fw-bold fs-6">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-8">
+                <h2 class="fw-bold pb-3">ESI Registration - An Overview</h2>
+                <p class="fs-5">ESI Registration is a mandatory requirement for businesses under the Employees' State Insurance (ESI) scheme, governed by the ESIC Act. The scheme offers crucial medical benefits and financial protection to employees, ensuring their well-being in case of sickness, injury, or maternity. Managed by the Employees State Insurance Corporation (ESIC), the scheme applies to all establishments with more than 10 employees, including those covered under the Establishment Act and other businesses like Newspaper establishments.</p>
+                <p class="fs-5">The ESIC registration process can be completed through online registration on the ESIC website or the Shram Suvidha Portal. Employers must submit following documents, including the company's PAN Card, Registration Certificate, Certificate of Incorporation, and Address proof of the establishment such as utility bills. Additionally, a cancelled cheque and Partnership deed (if applicable) are also required. The number of employees and their details, like Mobile Number and email ID, must be provided during the process.</p>
+                <p class="fs-5">After successful ESI Registration, a unique 17-digit code number is issued. This code is essential for future compliance with the scheme, such as making monthly payments and tracking contributions.</p>
+            
+            </div>
+            <div class="col-lg-4 d-flex align-items-center">
+                <img src="https://assets.vakilsearch.com/live-images/esi-registration.svg" height="350" width="350">
+            </div>
+            <p class="fs-5">Employers are required to pay ESI contributions based on the employee's monthly wages, with rates set by the ESI Corporation. Contributions must be deposited into a designated bank account within a specific time limit, ensuring that all eligible employees, referred to as Insured Persons, can access the benefits under the scheme. Employers must also maintain proper records of the employees, such as the attendance register, and ensure they file the ESI return within the due dates.</p>
+            <p class="fs-5">Failure to comply with these regulations can result in penalties under the Factories Act and rules established by the Central Government.</p>
+            <p class="fs-5">For employees, the ESI scheme offers comprehensive medical benefits at ESIC hospitals and approved medical institutions. The scheme also provides health insurance for employees and their families, covering areas like Occupational Health, maternity leave, and employment injury compensation. Additionally, employees can avail cash benefits during periods of illness or disability.</p>
+            <p class="fs-5">For businesses, completing ESI Registration is essential to ensure legal compliance, avoid fines, and promote a healthier, more secure workforce. This social security scheme strengthens workplace safety, aligns with regulations from the Government of India, and fosters a positive work environment.</p>
+            <p class="fs-5">ESI Registration is crucial for every qualifying business establishment in India, ensuring both employers and employees benefit from the comprehensive protection offered under the ESI scheme.</p>
+        
+        </div>
+
+
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-8">
+                <h2 class="fw-bold pb-3">Who Needs ESI Registration?</h2>
+                <p class="fs-5">Under the ESI Act 1948, ESI Registration is mandatory for all factories and establishments, including private educational institutions, with more than 10 employees (or 20 in some states). This rule applies to all businesses registered under the Employee State Insurance Corporation (ESIC). Employees earning up to ₹21,000 per month (or ₹25,000 in the case of disabilities) are eligible for the scheme.</p>
+                <p class="fs-5">Employers, as part of Step 1 in the registration process, must contribute a percentage of the employee’s monthly wages to the ESI scheme. These Contribution Rates are set by the Ministry of Labour and provide benefits like healthcare and disability coverage. Both employers and employees contribute, though the employer's share is larger.</p>
+                <p class="fs-5">To complete ESI Registration, employers must submit required documents like the PAN Card of the business, list of employees, and Articles of Association during Company Registration. The process can be done online through the ESIC portal, where a unique 17-digit digit Registration Number is issued. For those already registered, the Employer Login on the portal is used to manage contributions and compliance.</p>
+            
+            </div>
+            <div class="col-lg-4 d-flex align-items-center">
+                <img src="https://assets.vakilsearch.com/live-images/who-needs.svg" height="350" width="350">
+            </div>
+            <p class="fs-5">For proper registration, businesses must provide additional information, such as the establishment’s health insurance scheme, and comply with guidelines from State Governments and the Indian government. This includes those covered under factory/establishment laws or businesses like private educational institutions.</p>
+            <p class="fs-5">Employers can also track registration status using the Common Registration Link or through the IP Portal. Proper compliance ensures that Indian workers are protected by भारत सरकार's social security laws.</p>
+            
+        
+        </div>
+
+
+    </div>
+
+
+    <div class="box15-footer back-green mt-5">
+        <div class="container pt-5 pb-4">
+            <div class="row row-cols-lg-3">
+                <div class="text-white ps-5 pe-5">
+                    <h3>CORPORATE AND LEGAL SOLUTIONS</h3>
+                    <div class="line"></div>
+                    <p class="pt-4">Goods and Service Taxes</p>
+                    <p>Company Registration</p>
+                    <p>Non-governmental organization (NGO)</p>
+                    <p>Intellectual Property (IP)</p>
+
+                    <h4 class="pt-3 pb-2">Follow Us</h4>
+                    <div>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-twitter ps-3"></i>
+                        <i class="fa-brands fa-facebook-f ps-3"></i>
+                        <i class="fa-brands fa-instagram ps-3"></i>
+                        <i class="fa-brands fa-youtube ps-3"></i>
+                    </div>
+                </div>
+
+                <div class="text-white">
+                    <h3>FINANCE AND INVESTMENT CALUCATORS</h1>
+                        <div class="line"></div>
+                        <div>
+                            <p class="pt-4">Gratuity Calculator</p>
+                            <p>Pay Commission of India</p>
+                            <p>Business Setup Calculator</p>
+                            <p>Simple Compound Interest Calculator</p>
+                            <p>Home Loan EMI Calculator</p>
+                            <p>Mutual Fund Returns Calculator</p>
+                            <p>Retirement Planning Calculator</p>
+                        </div>
+
+                </div>
+
+                <div class="text-white">
+                    <h3>BUSINESS AND LEGAL RESOURCES</h1>
+                        <div class="line"></div>
+                        <div>
+                            <p class="pt-4">Consumer Complaint</p>
+                            <p class="pt-2">HSN Code</p>
+                            <p class="pt-2">
+                                Patent Search</p>
+                            <p class="pt-2">
+                                Trademark Search</p>
+                            <p class="pt-2">Company Name Search</p>
+
+                        </div>
+
+                </div>
+            </div>
+            <div class="line2 mt-5"></div>
+            <div class="copyright">
+                <p class="text-white pt-1 text-center">© Copyrights. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Incorporation Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Startups</a>';
+        document.getElementById("bussiness-setup-links").innerHTML = links;
+        function getLinks(linkName) {
+
+            if (linkName == "RegistrationinIndia") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Incorporation Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Startups</a>';
+                document.getElementById("bussiness-setup-links").innerHTML = links;
+            }
+            if (linkName == "LLPRegistrationa") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Ideal for Small Businesses</a>';
+                document.getElementById("bussiness-setup-links").innerHTML = links;
+            }
+
+            if (linkName == "onePerson") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Efficient</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Incorporation Benefits</a><a href="" class="list-group-item list-group-item-action">Perfect for Solo Entrepreneurs</a>';
+                document.getElementById("bussiness-setup-links").innerHTML = links;
+            }
+            if (linkName == "Section8") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Incorporation Benefits</a><a href="" class="list-group-item list-group-item-action">Ideal for NGOs</a>';
+                document.getElementById("bussiness-setup-links").innerHTML = links;
+            }
+        }
+
+    </script>
+
+    <script>
+        var taxCompliancelinks = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Businesses</a>';
+        document.getElementById("taxCompliancelinks").innerHTML = links;
+        function getLinksTaxCompliance(linkName) {
+            if (linkName == "GSTRegistration") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Businesses</a>';
+                document.getElementById("taxCompliancelinks").innerHTML = links;
+            }
+            if (linkName == "ITR") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Filing Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Individuals & Businesses</a>';
+                document.getElementById("taxCompliancelinks").innerHTML = links;
+            }
+            if (linkName == "TDS") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Efficient</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Filing Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Businesses</a>';
+                document.getElementById("taxCompliancelinks").innerHTML = links;
+            }
+        }
+    </script>
+
+    <script>
+        var trademarkIPlinks = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Brands</a>';
+        document.getElementById("trademarkIPlinks").innerHTML = links;
+        function getLinksTradeMark(linkName) {
+            if (linkName == "tradeMark") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Brands</a>';
+                document.getElementById("trademarkIPlinks").innerHTML = links;
+            }
+            if (linkName == "copyRight") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Ideal for Creators</a>';
+                document.getElementById("trademarkIPlinks").innerHTML = links;
+            }
+
+        }
+    </script>
+
+    <script>
+        var documentationlinks = '<a href="" class="list-group-item list-group-item-action">Affordable & Reliable</a><a href="" class="list-group-item list-group-item-action">Comprehensive Services</a><a href="" class="list-group-item list-group-item-action">Post-Drafting Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Businesses</a>';
+        document.getElementById("documentationlinks").innerHTML = links;
+        function getLinksDocumentation(linkName) {
+            if (linkName == "draftingLegal") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Reliable</a><a href="" class="list-group-item list-group-item-action">Comprehensive Services</a><a href="" class="list-group-item list-group-item-action">Post-Drafting Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Businesses</a>';
+                document.getElementById("documentationlinks").innerHTML = links;
+            }
+            if (linkName == "nonDisclosure") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Drafting Benefits</a><a href="" class="list-group-item list-group-item-action">Ideal for Startups</a>';
+                document.getElementById("documentationlinks").innerHTML = links;
+            }
+
+        }
+    </script>
+
+    <script>
+        var otherslinks = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Food Businesses</a>';
+        document.getElementById("otherslinks").innerHTML = links;
+        function getLinksOthers(linkName) {
+            if (linkName == "FSSAI") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Food Businesses</a>';
+                document.getElementById("otherslinks").innerHTML = links;
+            }
+            if (linkName == "IEC") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Ideal for Exporters</a>';
+                document.getElementById("otherslinks").innerHTML = links;
+            }
+
+        }
+    </script>
+
+    <script>
+        var resourceslinks = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Food Businesses</a>';
+        document.getElementById("resourceslinks").innerHTML = links;
+        function getLinksResources(linkName) {
+            if (linkName == "taxation") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Transparent</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Trusted by Food Businesses</a>';
+                document.getElementById("resourceslinks").innerHTML = links;
+            }
+            if (linkName == "accounting") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Ideal for Exporters</a>';
+                document.getElementById("resourceslinks").innerHTML = links;
+            }
+            if (linkName == "consulting") {
+                const links = '<a href="" class="list-group-item list-group-item-action">Affordable & Quick</a><a href="" class="list-group-item list-group-item-action">Comprehensive Compliance</a><a href="" class="list-group-item list-group-item-action">Post-Registration Benefits</a><a href="" class="list-group-item list-group-item-action">Ideal for Exporters</a>';
+                document.getElementById("resourceslinks").innerHTML = links;
+            }
+
+        }
+    </script>
+
+
+    <script>
+        function displayNavLinks(event) {
+            const id = event.target.id;
+            var menu = document.querySelector("#" + id + " :nth-child(2)");
+            menu.style.display = (menu.style.display === "inline-block") ? "none" : "inline-block";
+            menu.style.width = "470px";
+            document.addEventListener("click", function (event) {
+                var dropdown = document.querySelector("#" + id);
+                if (!dropdown.contains(event.target)) {
+                    menu.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

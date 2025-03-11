@@ -1,0 +1,60 @@
+.text-green{
+
+  color:#119083;  
+
+}
+
+.back-green{
+background-color: #119083;
+
+}
+
+
+.magicpattern { 
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    background-image: url("./images/magicpattern-polka-dot-pattern-1740047307402.png");
+  }
+  
+
+
+
+.nav-item {
+    padding: 0.5rem 0xp;
+  }
+  
+  /* .dropdown-hover:hover>.dropdown-menu {
+  display: inline-block;
+  } */
+  
+  .dropdown-hover>.dropdown-toggle:active {
+  /* Without this, clicking will make it sticky */
+  pointer-events: none;
+  }
+
+.circle {
+    height: 70px;
+    width: 70px;
+    /* border-radius: 50%; */
+    border: 2px solid white;
+    /* display:none; */
+  }
+  .image-box{
+    height: 30px;
+    width:35px
+  }
+  
+
+
+.hoverlinks a:hover{
+  color:#119083;  
+}
+
+
+
+
+
+
