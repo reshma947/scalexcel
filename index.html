@@ -45,7 +45,7 @@
             cursor: pointer;
         }
 
-        .mega-menu-right-list-items a:nth-child(1) {
+        .mega-menu-right-list-items a:nth-child(1),.bold {
             font-size: 18px;
             font-weight: bold;
             width: max-content;
@@ -159,7 +159,7 @@
                                         <div class="mega-menu-left-list-items list-group list-group-flush">
                                             <p class="list-group-item list-group-item-action py-3 me-auto"
                                                 id="gstandOtherIndirectTax" onclick="displayMenuItemTax(event)"
-                                                onmouseover="getListItems(event);"><i class="far fa-building"></i>
+                                                onmouseover="getListItemsTax(event);"><i class="far fa-building"></i>
                                                 GST and Other Indirect Tax <i
                                                     class="float-end pt-1 fas fa-angle-right"></i>
                                             </p>
@@ -1050,12 +1050,12 @@
             }
 
             if (id === "labourCompliance") {
-                const taxLinks = '<a class="list-group-item list-group-item-action" href="#">Labour Compliance</a> <a class="list-group-item list-group-item-action" href="./pf-registration.html">Provident Fund (PF) Registration</a> <a class="list-group-item list-group-item-action" href="./esi-registration.html">ESI Registration</a> <a class="list-group-item list-group-item-action" href="./pt-registration.html">Professional Tax Registration</a><a class="list-group-item list-group-item-action" href="./labour.html">Labour Licence</a> <a class="list-group-item list-group-item-action" href="#">Trade Licence</a>';
+                const taxLinks = '<a class="list-group-item list-group-item-action" href="#">Labour Compliance</a> <a class="list-group-item list-group-item-action" href="./pf-registration.html">Provident Fund (PF) Registration</a> <a class="list-group-item list-group-item-action" href="./esi-registration.html">ESI Registration</a> <a class="list-group-item list-group-item-action" href="./pt-registration.html">Professional Tax Registration</a><a class="list-group-item list-group-item-action" href="./labour.html">Labour Licence</a> <a class="list-group-item list-group-item-action" href="#">GHMC Trade Licence</a>';
                 document.getElementById("tax&ComplianceListItems").innerHTML = taxLinks;
             }
 
             if (id === "accounting&Tax") {
-                const taxLinks = '<a class="list-group-item list-group-item-action" href="#">Accounting & Tax</a> <a class="list-group-item list-group-item-action" href="#">Accounting and Book-keeping</a> <a class="list-group-item list-group-item-action" href="./tds.html">TDS Return Filing</a> <a class="list-group-item list-group-item-action" href="./itr.html">Individual Income Tax Filing</a> <a class="list-group-item list-group-item-action" href="./itr-filling-sole.html">Proprietorship Tax Return Filing</a> <a class="list-group-item list-group-item-action" href="./itr-llp.html">ITR for LLP</a> <a class="list-group-item list-group-item-action" href="#">Corporate Tax</a> <a class="list-group-item list-group-item-action" href="./ita.html">Income Tax Assessment</a> <a class="list-group-item list-group-item-action" href="./itn-response.html">Income Tax Notice</a>';
+                const taxLinks = '<a class="list-group-item list-group-item-action" href="#">Accounting & Tax</a> <a class="list-group-item list-group-item-action" href="#">Accounting and Book-keeping</a> <a class="list-group-item list-group-item-action" href="#">TDS Return Filing</a> <a class="list-group-item list-group-item-action" href="./itr.html">Individual Income Tax Filing</a> <a class="list-group-item list-group-item-action" href="./itr-filling-sole.html">Proprietorship Tax Return Filing</a> <a class="list-group-item list-group-item-action" href="./itr-llp.html">ITR for LLP</a> <a class="list-group-item list-group-item-action" href="#">Corporate Tax</a> <a class="list-group-item list-group-item-action" href="./ita.html">Income Tax Assessment</a> <a class="list-group-item list-group-item-action" href="./itn-response.html">Income Tax Notice</a>';
                 document.getElementById("tax&ComplianceListItems").innerHTML = taxLinks;
             }
         }
@@ -1079,7 +1079,7 @@
             }
 
             if (id === "copyRight") {
-                const trademarkLinks = '<a class="list-group-item list-group-item-action" href="#">Copyright</a> <a class="list-group-item list-group-item-action" href="./copyright.html">Copyright Registration</a> <a class="list-group-item list-group-item-action" href="#">Copyright Music</a>';
+                const trademarkLinks = '<a class="list-group-item list-group-item-action" href="#">Copyright</a> <a class="list-group-item list-group-item-action" href="#">Copyright Registration</a> <a class="list-group-item list-group-item-action" href="#">Copyright Music</a>';
                 document.getElementById("trademark&IpListItems").innerHTML = trademarkLinks;
             }
 
@@ -1099,7 +1099,7 @@
     function getListItemsOthers(event) {
         const id = event.target.id;
         if (id === "ngo") {
-            const othersLinks = '<a class="list-group-item list-group-item-action" href="#">NGO Registration</a> <a class="list-group-item list-group-item-action" href="./ngo-registration.html">NGO</a> <a class="list-group-item list-group-item-action" href="./section-company-registration.html">Section 8 Company</a> <a class="list-group-item list-group-item-action" href="./trust-registration.html">Trust Registration</a> <a class="list-group-item list-group-item-action" href="./online-society.html">Society Registration</a>';
+            const othersLinks = '<a class="list-group-item list-group-item-action" href="#">NGO Registration</a> <a class="list-group-item list-group-item-action" href="./ngo-registration.html">NGO</a> <a class="list-group-item list-group-item-action" href="./section-company-registration.html">Section 8 Company</a> <a class="list-group-item list-group-item-action" href="./trust-registration.html">Trust Registration</a> <a class="list-group-item list-group-item-action" href="./online-society.html">Society Registration</a> <a class="list-group-item list-group-item-action bold" href="#">NGO Compliance</a> <a class="list-group-item list-group-item-action" href="#">NGO Compliance</a> <a class="list-group-item list-group-item-action" href="#">Section 8 Compliance</a> <a class="list-group-item list-group-item-action" href="#">CSR-1 Filing</a> <a class="list-group-item list-group-item-action" href="#">Sec. 80G & Sec. 12A</a> <a class="list-group-item list-group-item-action" href="#">Darpan Registration</a> <a class="list-group-item list-group-item-action" href="#">FCRA Registration</a>';
             document.getElementById("othersListItems").innerHTML = othersLinks;
         }
 
@@ -1108,15 +1108,19 @@
             document.getElementById("othersListItems").innerHTML = othersLinks;
         }
 
+
         if (id === "ca/Cs") {
-            const othersLinks = '<a class="list-group-item list-group-item-action" href="#">CA/CS</a>';
+            const othersLinks = '<a class="list-group-item list-group-item-action" href="#">CA/CS</a> <a class="list-group-item list-group-item-action" href="#">Net Worth Certificate for VISA</a> <a class="list-group-item list-group-item-action" href="#">Property Valuation Certificate</a> <a class="list-group-item list-group-item-action" href="#">Future & Options (F&O) Tax Audit</a> <a class="list-group-item list-group-item-action" href="#">Project Report/(CMA) </a>';
             document.getElementById("othersListItems").innerHTML = othersLinks;
         }
 
+
         if (id === "rera") {
-            const othersLinks = '<a class="list-group-item list-group-item-action" href="#">RERA</a> <a class="list-group-item list-group-item-action" href="#">Net Worth Certificate for VISA</a> <a class="list-group-item list-group-item-action" href="#">Property Valuation Certificate</a> <a class="list-group-item list-group-item-action" href="#">Future & Options (F&O) Tax Audit</a> <a class="list-group-item list-group-item-action" href="#">Project Report/(CMA) </a>';
+            const othersLinks = '<a class="list-group-item list-group-item-action" href="#">RERA</a>';
             document.getElementById("othersListItems").innerHTML = othersLinks;
         }
+
+        
 
     }
 

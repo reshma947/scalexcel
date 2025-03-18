@@ -490,20 +490,52 @@
             </div>
 
             <div class="col">
+                <div class="overflow-relative" id="overflow-relative-1">
                 <div class="img-border">
                     <div class="blog-img1">
                     </div>
+                    <div>
+                        <h3 class="fw-bold pt-3 pb-2">The Role of a Virtual CFO in Business Growth</h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                            live the blind texts.</p>
+                    </div>
+                    <div class="d-lg-flex justify-content-center">
+                        <button id="btn-1" onclick="displayOverlay(event)" class="blog-btn">Read More..</button>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="fw-bold pt-3 pb-2">The Role of a Virtual CFO in Business Growth</h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
+                <div class="overflow-absolute">
+                    <div>
+                        
+                        <h4>Income Tax Return (ITR) Forms</h4>
+                        <p>These forms are used for filing income tax returns:</p>
+                        <p>ITR-1 (Sahaj): For salaried individuals with income up to ₹50 lakh.</p>
+                        <p>ITR-2: For individuals and HUFs with income from capital gains, multiple house properties, or foreign assets.</p>
+                        <p>ITR-3: For individuals/HUFs having income from business or profession.</p>
+                        <p>ITR-4 (Sugam): For presumptive income taxpayers (small businesses & professionals).</p>
+                        <p>ITR-5: For LLPs, partnerships, AOPs, BOIs, etc.</p>
+                        <p>ITR-6: For companies (except those claiming exemption under Section 11).</p>
+                        <p>ITR-7: For trusts, political parties, and institutions claiming tax exemption.</p>
+                    </div>
+                    <button id="btn-close-1" onclick="closeOverlay(event)" class="blog-btn">close</button>
                 </div>
-                <div class="d-lg-flex justify-content-center">
-                    <button>Read More</button>
                 </div>
             </div>
 
+            <script>
+                function displayOverlay(event){
+                    const div = document.getElementsByClassName("overflow-absolute");
+                    // div[0].style.display=  "inline";
+                    div[0].style.height = "100%"
+                      div[0].style.padding = "10px"
+                }
+
+                function closeOverlay(event){
+                    const div = document.getElementsByClassName("overflow-absolute");
+                    div[0].style.height = "0%"
+                      div[0].style.padding = "0px"
+                    // div[0].style.display=  "none";
+                }
+            </script>
             <div class="col">
                 <div class="img-border">
                     <div class="blog-img3">
