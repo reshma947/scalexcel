@@ -522,20 +522,105 @@
             </script>
 
 <div class="col">
-    <div class="img-border">
-        <div class="blog-img1">
+    <div class="overflow-relative-3" id="overflow-relative-3">
+        <div class="img-border">
+            <div class="blog-img3">
+            </div>
+            <div>
+                <h3 class="fw-bold pt-3 pb-2">Types of food license</h3>
+                <p class="fs-6">In India, food businesses must obtain a Food License from the Food Safety
+                    and Standards Authority of India (FSSAI).</p>
+            </div>
+            <div class="d-lg-flex justify-content-center">
+                <button id="btn-3" onclick="display3Overlay(event)" class="blog-btn fw-bold">Read
+                    More..</button>
+            </div>
         </div>
-    </div>
-    <div>
-        <h3 class="fw-bold pt-3 pb-2">How to Choose the Right Accounting Software for Your Business</h3>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-            live the blind texts.</p>
-    </div>
-    <div class="d-lg-flex justify-content-center">
-        <button>Read More</button>
+        <div class="overflow-absolute-3">
+            <div class="text-white p-3">
+
+                <h4 class="fw-bold">Types of food license</h4>
+                <p class="">In India, food businesses must obtain a Food License from the Food Safety and
+                    Standards Authority of India (FSSAI). There are three types of food licenses based on
+                    the size and nature of the business:</p>
+
+                <p><b>1. FSSAI Basic Registration</b></p>
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>For: Small food businesses (annual turnover ≤ ₹12 lakh).</p>
+                </div>
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>Applicable to:</p>
+                </div>
+                <p>Small manufacturers, retailers, distributors, and home-based food sellers.</p>
+                <p>Small food stalls, petty vendors, and cottage industries.</p>
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>Issued by: State Government.</p>
+                </div>
+
+                <p><b>2. FSSAI State License</b></p>
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>For: Medium-sized businesses (annual turnover ₹12 lakh – ₹20 crore).</p>
+                </div>
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>Applicable to:</p>
+                </div>
+                <p>Medium-scale food manufacturers, storage units, transporters, retailers, restaurants, and
+                    caterers.</p>
+                <p>Food processing units (capacity limits apply).</p>
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>Issued by: State Government.</p>
+                </div>
+
+                <p><b>3. FSSAI Central License</b></p>
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>For: Large businesses (annual turnover > ₹20 crore).</p>
+                </div>
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>Applicable to:</p>
+                </div>
+                <p>Large-scale manufacturers, importers, exporters, food chains, and big restaurants.</p>
+                <p>Businesses operating in multiple states.</p>
+                <p>Government institutions like railways, airports, and seaports.</p>
+
+                <div class="d-lg-flex">
+                    <i class="fas fa-angle-right pt-1 pe-2"></i>
+                    <p>Issued by: Central FSSAI Authority.</p>
+                </div>
+
+            </div>
+
+            <div class="d-lg-flex justify-content-center">
+                <button id="btn-close-3" onclick="close3Overlay(event)" class="blog-btn fw-bold"><i
+                        class="fas fa-xmark"></i></button>
+            </div>
+        </div>
     </div>
 </div>
 
+
+<script>
+    function display3Overlay(event) {
+        const div = document.getElementsByClassName("overflow-absolute-3");
+        // div[0].style.display=  "inline";
+        div[0].style.height = "100%"
+        div[0].style.padding = "10px"
+    }
+
+    function close3Overlay(event) {
+        const div = document.getElementsByClassName("overflow-absolute-3");
+        div[0].style.height = "0%"
+        div[0].style.padding = "0px"
+        // div[0].style.display=  "none";
+    }
+</script>
         </div>
     </div>
 
